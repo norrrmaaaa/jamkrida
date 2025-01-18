@@ -2,7 +2,7 @@
 	include("sess_check.php");
 	
 	// deskripsi halaman
-	$pagedesc = "Data Karyawan";
+	$pagedesc = "Data Suretybond";
 	include("layout_top.php");
 	include("dist/function/format_tanggal.php");
 	include("dist/function/format_rupiah.php");
@@ -13,7 +13,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Data User Suretybond</h1>
+                        <h1 class="page-header">Data Suretybond</h1>
                     </div><!-- /.col-lg-12 -->
                 </div><!-- /.row -->
 				
@@ -31,32 +31,32 @@
 								<table class="table table-striped table-bordered table-hover" id="tabel-data">
 									<thead>
 										<tr>
-											<th width="1%">No</th>
-											<th width="10%">NPWP</th>
-											<th width="10%">Nama</th>
+											<th width="1%">No.pemohon</th>
+											<th width="10%">Nama Agen</th>
+											<th width="10%">Nama Perusahaan</th>
 											<th width="5%">Telepon</th>
-											<th width="10%">Alamat</th>
-											<th width="10%">Akses</th>
+											<th width="10%">Jenis Jamian</th>
+											<th width="10%">Nilai Jaminan</th>
 											<th width="10%">Opsi</th>
 										</tr>
 									</thead>
 									<tbody>
 										<?php
 											$i = 1;
-											$sql = "SELECT * FROM employee ORDER BY nama_emp ASC";
+											$sql = "SELECT * FROM suretybond ORDER BY nama_agen ASC";
 											$ress = mysqli_query($conn, $sql);
 											while($data = mysqli_fetch_array($ress)) {
 												echo '<tr>';
 												echo '<td class="text-center">'. $i .'</td>';
-												echo '<td class="text-center">'. $data['npwp'] .'</td>';
-												echo '<td class="text-center">'. $data['nama_emp'] .'</td>';
-												echo '<td class="text-center">'. $data['telp_emp'] .'</td>';
-												echo '<td class="text-center">'. $data['alamat'] .'</td>';
-												echo '<td class="text-center">'. $data['hak_akses'] .'</td>';
+												echo '<td class="text-center">'. $data['id'] .'</td>';
+												echo '<td class="text-center">'. $data['nama_perusahaan'] .'</td>';
+												echo '<td class="text-center">'. $data['no_telp'] .'</td>';
+												echo '<td class="text-center">'. $data['jenis_jaminan'] .'</td>';
+												echo '<td class="text-center">'. $data['nilai_jaminan'] .'</td>';
 												echo '<td class="text-center">
-													  <a href="#myModal" data-toggle="modal" data-load-code="'.$data['npwp'].'" data-remote-target="#myModal .modal-body" class="btn btn-primary btn-xs">Detail</a>
-													  <a href="karyawan_edit.php?npwp='. $data['npwp'] .'" class="btn btn-warning btn-xs">Edit</a>';?>
-													  <a href="karyawan_hapus.php?npwp=<?php echo $data['npwp'];?>" onclick="return confirm('Apakah anda yakin akan menghapus <?php echo $data['nama_emp'];?>?');" class="btn btn-danger btn-xs">Hapus</a></td>
+												<a href="#myModal" data-toggle="modal" data-load-code="'.$data['id'].'" data-remote-target="#myModal .modal-body" class="btn btn-primary btn-xs">Detail</a>
+												<a href="suretybond_edit.php?id='. $data['id'] .'" class="btn btn-warning btn-xs">Edit</a>';?>
+													  <a href="action/suretybond_hapus.php?id=<?php echo $data['id'];?>" onclick="return confirm('Apakah anda yakin akan menghapus <?php echo $data['nama_agen'];?>?');" class="btn btn-danger btn-xs">Hapus</a></td>
 												<?php
 													  echo '</td>';
 												echo '</tr>';												
@@ -105,7 +105,7 @@
 					var $this = $(this);
 					var code = $this.data('load-code');
 					if(code) {
-						$($this.data('remote-target')).load('karyawan_detail.php?code='+code);
+						$($this.data('remote-target')).load('suretybond_detail.php?code='+code);
 						app.code = code;
 						
 					}

@@ -6,7 +6,7 @@ include("sess_check.php");
 include("dist/function/format_tanggal.php");
 if($_GET) {
 	$kode = $_GET['code'];
-	$sql = "SELECT * FROM employee WHERE npp='". $_GET['code'] ."'";
+	$sql = "SELECT * FROM suretybond WHERE id='". $_GET['code'] ."'";
 	$query = mysqli_query($conn,$sql);
 	$result = mysqli_fetch_array($query);
 }
@@ -24,7 +24,7 @@ else {
 </div>
 <div class="modal-header">
 	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
-	<h4 class="modal-title" id="myModalLabel">Detail Karyawan</h4>
+	<h4 class="modal-title" id="myModalLabel">Detail Suretybond</h4>
 </div>
 <div><br/>
 <table width="100%">

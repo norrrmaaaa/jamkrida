@@ -118,9 +118,9 @@ $tahun = date("Y");
 						<ul class="nav nav-second-level">
 							<?php
 							if ($pagedesc == "Suretybond") {
-								echo '<li><a href="karyawan.php" class="active">Suretybond</a></li>';
+								echo '<li><a href="suretybondq.php" class="active">Suretybond</a></li>';
 							} else {
-								echo '<li><a href="karyawan.php">Suretybond</a></li>';
+								echo '<li><a href="suretybond.php">Suretybond</a></li>';
 							}
 							
 							if ($pagedesc == "Bank Garansi") {

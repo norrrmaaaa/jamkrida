@@ -1,9 +1,9 @@
 <?php 
 require_once("dist/config/koneksi.php");
 // code user username availablity
-if(!empty($_POST["npp"])) {
-	$npp= $_POST["npp"];
-	$sql = "SELECT * FROM employee WHERE npp='$npp'";
+if(!empty($_POST["id"])) {
+	$npp= $_POST["id"];
+	$sql = "SELECT * FROM suretybond WHERE id='$npp'";
 	$query = mysqli_query($conn,$sql);
 	if(mysqli_num_rows($query)>0){
 		echo "<span style='color:red'> NPP sudah terdaftar.</span>";
