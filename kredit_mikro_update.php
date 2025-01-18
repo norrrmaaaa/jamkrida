@@ -23,6 +23,6 @@
 		WHERE id='". $id ."'";
 
 		$ress = mysqli_query($conn, $sql);
-		header("location: suretybond.php?act=update&msg=success");
+		header("location: kredit_mikro.php?act=update&msg=success");
 	}
 ?>

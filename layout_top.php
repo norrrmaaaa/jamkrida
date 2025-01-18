@@ -124,14 +124,14 @@ $tahun = date("Y");
 							}
 							
 							if ($pagedesc == "Bank Garansi") {
-								echo '<li><a href="karyawan.php" class="active">Bank Garansi</a></li>';
+								echo '<li><a href="bank_garansi.php" class="active">Bank Garansi</a></li>';
 							} else {
-								echo '<li><a href="karyawan.php">Bank Garansi</a></li>';
+								echo '<li><a href="bank_garansi.php">Bank Garansi</a></li>';
 							}
 							if ($pagedesc == "Kredit Mikro") {
-								echo '<li><a href="karyawan.php" class="active">Kredit Mikro</a></li>';
+								echo '<li><a href="kredit_mikro.php" class="active">Kredit Mikro</a></li>';
 							} else {
-								echo '<li><a href="karyawan.php">kredit Mikro</a></li>';
+								echo '<li><a href="kredit_mikro.php">kredit Mikro</a></li>';
 							}
 							if ($pagedesc == "Kredit Barang/Jasa") {
 								echo '<li><a href="karyawan.php" class="active">Kredit Barang/Jasa</a></li>';

@@ -7,7 +7,7 @@
 		$data = mysqli_fetch_array($ress);
 	}
 	// deskripsi halaman
-	$pagedesc = "Data Suretybond";
+	$pagedesc = "Data Kredit Mikro";
 	$menuparent = "master";
 	include("layout_top.php");
 ?>
@@ -32,7 +32,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Data suretybond</h1>
+                        <h1 class="page-header">Data Kredit Mikro</h1>
                     </div><!-- /.col-lg-12 -->
                 </div><!-- /.row -->
 
@@ -42,7 +42,7 @@
 				
 				<div class="row">
 					<div class="col-lg-12">
-						<form class="form-horizontal" action="suretybond_update.php" method="POST" enctype="multipart/form-data">
+						<form class="form-horizontal" action="kredit_mikro_update.php" method="POST" enctype="multipart/form-data">
 							<div class="panel panel-default">
 								<div class="panel-heading"><h3>Edit Data</h3></div>
 								<div class="panel-body">

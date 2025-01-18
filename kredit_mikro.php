@@ -2,7 +2,7 @@
 	include("sess_check.php");
 	
 	// deskripsi halaman
-	$pagedesc = "Data Suretybond";
+	$pagedesc = "Data Kredit Mikro";
 	include("layout_top.php");
 	include("dist/function/format_tanggal.php");
 	include("dist/function/format_rupiah.php");
@@ -13,7 +13,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Data Suretybond</h1>
+                        <h1 class="page-header">Data Kredit Mikro</h1>
                     </div><!-- /.col-lg-12 -->
                 </div><!-- /.row -->
 				
@@ -55,8 +55,8 @@
 												echo '<td class="text-center">'. $data['nilai_jaminan'] .'</td>';
 												echo '<td class="text-center">
 												<a href="#myModal" data-toggle="modal" data-load-code="'.$data['id'].'" data-remote-target="#myModal .modal-body" class="btn btn-primary btn-xs">Detail</a>
-												<a href="suretybond_edit.php?id='. $data['id'] .'" class="btn btn-warning btn-xs">Edit</a>';?>
-													  <a href="action/suretybond_hapus.php?id=<?php echo $data['id'];?>" onclick="return confirm('Apakah anda yakin akan menghapus <?php echo $data['nama_agen'];?>?');" class="btn btn-danger btn-xs">Hapus</a></td>
+												<a href="kredit_mikro_edit.php?id='. $data['id'] .'" class="btn btn-warning btn-xs">Edit</a>';?>
+													  <a href="action/kredit_mikro_hapus.php?id=<?php echo $data['id'];?>" onclick="return confirm('Apakah anda yakin akan menghapus <?php echo $data['nama_agen'];?>?');" class="btn btn-danger btn-xs">Hapus</a></td>
 												<?php
 													  echo '</td>';
 												echo '</tr>';												
@@ -105,7 +105,7 @@
 					var $this = $(this);
 					var code = $this.data('load-code');
 					if(code) {
-						$($this.data('remote-target')).load('suretybond_detail.php?code='+code);
+						$($this.data('remote-target')).load('kredit_mikro_detail.php?code='+code);
 						app.code = code;
 						
 					}
